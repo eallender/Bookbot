@@ -17,12 +17,27 @@ def main():
     print_report(book_fp, words, sorted)
 
 
-def get_book_text(filepath: str):
+def get_book_text(filepath: str) -> str:
+    """Gets the text from a book
+
+    Args:
+        filepath (str): The filepath to the book
+
+    Returns:
+        str: The book text
+    """
     with open(filepath) as f:
         return f.read()
 
 
 def print_report(book_fp: str, word_count: int, sorted_chars: dict):
+    """Prints the report for the analyzed book
+
+    Args:
+        book_fp (str): The filepath to the book analyzed
+        word_count (int): The word count of the book
+        sorted_chars (dict): The sorts dict of char counts in the book
+    """
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_fp}...")
     print("----------- Word Count ----------")
